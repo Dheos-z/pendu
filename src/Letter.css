@@ -1,0 +1,10 @@
+.letter {
+    font-size: 2em;
+    flex: 1 1 calc(100% / 16 - 0.4em);
+    outline: 0.08em solid black;
+    background-color: burlywood;
+    margin: 0.3em;
+    display: inline-block;
+    cursor: default;
+  }
+
