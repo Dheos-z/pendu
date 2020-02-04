@@ -1,3 +1,10 @@
+Famous game of Le Pendu using ReactJS. The user has 8 attempts to guess a word, letter by letter.
+1 letter not included in the word = 1 attempt
+
+/!\ The list of words is based on famous french singers and rappers.
+
+___________________________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
