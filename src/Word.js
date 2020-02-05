@@ -7,7 +7,7 @@ import './Word.css'
 
 const Word = ({ word, isVisible }) => {
     // If the Word is composed of multiple words
-    const seperatedWords = word.split(' ');
+    // const seperatedWords = word.split(' ');
     
     const letters = word.split('').map((character, index) => (
         <Letter
@@ -22,7 +22,6 @@ const Word = ({ word, isVisible }) => {
 
 Word.propTypes = {
     word: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
     isVisible: PropTypes.func.isRequired
 }
 

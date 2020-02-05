@@ -8,3 +8,7 @@
     cursor: default;
   }
 
+.special-char {
+  padding:0.1em;
+  font-size: 3em;
+}

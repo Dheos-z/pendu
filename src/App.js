@@ -7,13 +7,14 @@ const words = require('./words');
 
 const defaultState = () => {
   const word = words[Math.floor(Math.random() * words.length)].toUpperCase();
+  const nbRemainingLetters = word.replace(/[^A-Z]/g, '').length;
 
   return {
     remainingTries: 8,
     selectedLetters: [],
     foundLetters: [],
     word,
-    nbRemainingLetters: word.length,
+    nbRemainingLetters,
     win: false,
     lose: false
   }
@@ -50,14 +51,15 @@ class App extends Component {
           this.setState({ win: true, foundLetters: [...word], selectedLetters: [...ALPHABET] });
         }
       }
-      else {
+      else { // The letter is not in the word
         this.setState({remainingTries: remainingTries-1});
+
+        // Check if the user lost
+        if(nbRemainingLetters-occurrences !== 0 && this.state.remainingTries-1 === 0) {
+          this.setState({lose: true, foundLetters: [...word], selectedLetters: [...ALPHABET]});
+        }
       }
       
-      // Check if the user lost
-      if(nbRemainingLetters-occurrences !== 0 && this.state.remainingTries-1 === 0) {
-        this.setState({lose: true, foundLetters: [...word], selectedLetters: [...ALPHABET]});
-      }
     }
     return;
   }
@@ -97,7 +99,7 @@ class App extends Component {
         <div className="word">
           <Word 
             word={word}  
-            isVisible={this.isVisible} 
+            isVisible={this.isVisible}
           />
         </div>
         <br />
