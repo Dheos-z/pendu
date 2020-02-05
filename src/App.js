@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Letter from './Letter';
+import Word from './Word';
 import tmax from './tmax.gif';
 const words = require('./words');
 
@@ -61,7 +62,7 @@ class App extends Component {
     return;
   }
 
-  isVisible(character) {
+  isVisible = character => {
     const { foundLetters } = this.state;
 
     if (foundLetters.includes(character)) {
@@ -94,17 +95,10 @@ class App extends Component {
         <img className='tmax' src={tmax} alt="T-max en Y"/>
         <h2>Devine le rappeur</h2>
         <div className="word">
-          {
-            word.split('').map((character, index) => (
-              <Letter
-                isButton={false}
-                character={character}
-                key={index}
-                onClick={this.handleLetterClick}
-                visible={this.isVisible(character)}
-              />
-            ))
-          }
+          <Word 
+            word={word}  
+            isVisible={this.isVisible} 
+          />
         </div>
         <br />
         <div className="alphabet">

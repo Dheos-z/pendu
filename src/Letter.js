@@ -21,7 +21,7 @@ const Letter = ({ character, onClick, visible, selectable, isButton }) => {
 
 Letter.propTypes = {
   character: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   visible: PropTypes.bool,
   selectable: PropTypes.bool,
   isButton: PropTypes.bool
