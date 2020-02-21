@@ -135,7 +135,7 @@ const Game = () => {
                 lose &&
                 <div className="loseMessage">
                     <p>Perdu ! Le rappeur à deviner était {word}.</p>
-                    <button onClick={replayGame}>Rejouer</button>
+                    <button onClick={replayGame} className="btn-gradient">Rejouer</button>
                 </div>
             }
             {
