@@ -7,10 +7,10 @@
 }
 
 .keyboard {
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
-  /* background-color: rgb(240, 235, 214); */
+  /* background-color: rgb(80, 82, 175); */
   padding: 10px;
   /* outline: 2px solid black; */
   /* margin: 50px; */
@@ -18,7 +18,7 @@
 
 .keyboardLine {
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: center;
 }
 
