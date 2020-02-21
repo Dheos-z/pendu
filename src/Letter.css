@@ -1,12 +1,14 @@
 .letter {
     font-size: 2em;
-    flex: 1 1 calc(100% / 16 - 0.4em);
-    outline: 0.08em solid black;
+    /* outline: 0.08em solid black; */
     background-color: burlywood;
     margin: 0.3em;
     display: inline-block;
-    cursor: default;
-  }
+    border: 2px solid rgba(0,0,0,0.21);
+    border-bottom: 4px solid rgba(0,0,0,0.21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    }
 
 .special-char {
   padding:0.1em;

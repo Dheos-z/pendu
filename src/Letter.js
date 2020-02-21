@@ -13,11 +13,10 @@ const Letter = ({ character, onClick, visible, selectable, isButton }) => {
     )
   }
   else { // It is a character from the word to guess
-    if([' ', '\''].includes(character)) { // It is a space
-      console.log('wesh');
+    if([' ', '\''].includes(character)) { // It is a space or an apostrophe
     return <span className="special-char">{character}</span>
     }
-    return ( // It a non-space character
+    return ( // It is a non-space character
     <button className="letter">{visible ? character : '_'}</button>
     )
   }

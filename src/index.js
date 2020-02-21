@@ -3,8 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import history from './history';
+import { Router, Switch, Route } from 'react-router-dom';
+import Game from './Game';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+
+ReactDOM.render(
+    <Router history={history}>
+        <Switch>
+            <Route exact path='/' component={App} />
+            <Route path='/game' component={Game} />
+        </Switch>
+    </Router>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

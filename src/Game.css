@@ -1,31 +1,25 @@
-
-.App {
+.game {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   text-align: center;
   align-items: center;
-  /* background-color: teal; */
 }
 
-.word {
-  display: inline-block;
-  padding: 30px;
-}
-
-
-
-header {
-  /* background-color: turquoise; */
-  margin-top: 60px;
-}
-
-.tmax {
+.keyboard {
   width: 40%;
-  /* background-color: thistle; */
+  display: flex;
+  flex-flow: column nowrap;
+  /* background-color: rgb(240, 235, 214); */
+  padding: 10px;
+  /* outline: 2px solid black; */
+  /* margin: 50px; */
 }
 
-h1 {
-  /* background-color: tomato; */
+.keyboardLine {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
 .btn-gradient {
@@ -42,6 +36,9 @@ h1 {
   margin: 50px;
 }
 
-h3 {
-  width: 40%;
+button.btn-gradient {
+  font-size: large;
+  font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
 }
+
+  
