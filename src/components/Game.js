@@ -4,7 +4,7 @@ import Word from './Word';
 import { Link } from 'react-router-dom';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import './Game.css';
-const words = require('./words');
+const words = require('../words');
 
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import tmax from './tmax.gif';
+import tmax from '../assets/tmax.gif';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
